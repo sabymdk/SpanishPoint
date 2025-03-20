@@ -25,7 +25,6 @@ namespace SpanishPointAssessment.Drivers
 
         }
 
-        [AfterScenario]
         public void Quit()
         {
             Driver.Quit();
