@@ -28,6 +28,13 @@ namespace SpanishPointAssessment.StepDefination
             repertoireManagementPage = new RepertoireManagementPage(webDriverManager.Driver);
         }
 
+       [AfterScenario]
+        public void TearDown()
+        {
+            Logger.Info("Tearing Down WebDriver after scenario execution");
+            webDriverManager.Quit();
+        }
+
         [Given("Navigate to the Matching Engine Website")]
         public void GivenNavigateToTheMatchingEngineWebsite()
         {
